@@ -24,8 +24,11 @@ module RspecMba
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.i18n.default_locale = "pt-BR"
+
     config.generators do |generators|
       generators.test_framework :rspec
+      # generators.factory_bot dir: 'custom/dir/for/factories'
     end
   end
 end

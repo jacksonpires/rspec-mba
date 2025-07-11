@@ -11,20 +11,31 @@ RSpec.describe User, type: :model do
       # user.last_name = 'Doe'
 
       # Setup + Exercise
-      user = User.new(first_name: 'John', last_name: 'Doe')
+      first_name = Faker::Name.first_name
+      last_name = Faker::Name.last_name
+
+      user = User.new(first_name:, last_name:)
 
       # Verify
-      expect(user.full_name).to match(/John Doe/)
+      expect(user.full_name).to match(/^#{first_name} #{last_name}$/)
 
       # Teardown - implicit
     end
 
     it 'checks if full_name attribute exists' do
-      user = User.new(first_name: 'John', last_name: 'Doe')
+      user = build(:user)
 
       expect(user).to respond_to(:full_name)
-      expect(user).to have_attributes(full_name: 'John Doe')
-      expect(user[:full_name]).to eq('John Doe')
+      expect(user).to have_attributes(full_name: user.full_name)
+      expect(user[:full_name]).to eq(user.full_name)
+    end
+
+    it 'checks if full_name attribute exists with the exact names Jackson Pires' do
+      user = build(:user, first_name: 'Jackson', last_name: 'Pires')
+
+      expect(user).to respond_to(:full_name)
+      expect(user).to have_attributes(full_name: user.full_name)
+      expect(user[:full_name]).to eq(user.full_name)
     end
   end
 end
