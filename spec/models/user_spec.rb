@@ -71,5 +71,13 @@ RSpec.describe User, type: :model do
 
       user.notify("Hello!")
     end
+
+    it "just a instance double example" do
+      user = instance_double("User")
+      allow(user).to receive(:full_name).and_return("O QUE EU QUISER") # stub
+
+      expect(user.full_name).to eq("O QUE EU QUISER")
+      expect(user).to have_received(:full_name).once
+    end
   end
 end
