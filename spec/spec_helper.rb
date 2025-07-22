@@ -15,6 +15,8 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'simplecov'
+require 'webmock/rspec'
+
 SimpleCov.start do
   add_group "Models", "app/models"
   add_group "Controllers", "app/controllers"

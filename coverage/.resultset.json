@@ -1,76 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jacksonpires/Projects/mba/rspec-mba/spec/models/user_spec.rb": {
+      "/Users/jacksonpires/Projects/mba/rspec-mba/spec/services/api/star_wars_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          2,
-          2,
-          2,
-          2,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
           1,
           0,
           null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
           null,
           0,
           0,
           null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
           0,
           0,
           null,
@@ -79,11 +21,11 @@
           null,
           1,
           1,
+          null,
           1,
           null,
           1,
           1,
-          null,
           null,
           null
         ]
@@ -115,7 +57,7 @@
           null,
           null,
           null,
-          2,
+          3,
           null,
           null,
           null,
@@ -378,13 +320,24 @@
           null
         ]
       },
-      "/Users/jacksonpires/Projects/mba/rspec-mba/app/models/user.rb": {
+      "/Users/jacksonpires/Projects/mba/rspec-mba/spec/support/vcr_setup.rb": {
         "lines": [
-          1,
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/jacksonpires/Projects/mba/rspec-mba/app/services/users/inspect.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           0,
+          null,
           null,
           null,
           null,
@@ -393,14 +346,26 @@
           null
         ]
       },
-      "/Users/jacksonpires/Projects/mba/rspec-mba/app/models/application_record.rb": {
+      "/Users/jacksonpires/Projects/mba/rspec-mba/app/services/api/star_wars.rb": {
         "lines": [
           1,
+          null,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1752710802
+    "timestamp": 1752715342
   }
 }
