@@ -33,6 +33,7 @@ RSpec.describe User, type: :model do
       expect(user).to respond_to(:full_name)
       expect(user).to have_attributes(full_name: user.full_name)
       expect(user[:full_name]).to eq(user.full_name)
+      # Teardown - implicit
     end
 
     it 'checks if full_name attribute exists with the exact names Jackson Pires' do
