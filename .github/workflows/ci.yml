@@ -6,6 +6,9 @@ jobs:
   rubocop:
     name: Rubocop
     runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+      RACK_ENV: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -18,3 +21,11 @@ jobs:
 
       - name: Analyze code
         run: bundle exec rubocop
+
+      - name: Configurar banco de dados
+        run: |
+          cp config/database.yml.github_actions config/database.yml
+          bin/rails db:prepare
+
+      - name: Rodar RSpec
+        run: bundle exec rspec
