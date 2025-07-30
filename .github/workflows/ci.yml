@@ -3,8 +3,8 @@ name: CI
 on: [push]
 
 jobs:
-  rubocop:
-    name: Rubocop
+  test:
+    name: Test + Rubocop
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
